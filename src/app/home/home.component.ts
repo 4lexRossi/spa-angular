@@ -40,6 +40,13 @@ export class HomeComponent implements OnInit {
     this.quantidade = 10;
   }
 
+  openModal() {
+        // document
+            // .querySelector('.modal-overlay')
+            // .classList
+            // .toggle('active')
+  }
+
   aumentarValorAlunos() {
     this.valor++;
   }

@@ -59,6 +59,7 @@
     <button (click)="diminuirQuantidadeProfessores()">Diminuir Quantidade</button>
     <button (click)="reiniciarQuantidadeProfessores()">Reiniciar Valor</button>
     <button (click)="exibirTabelaProfessores()">Exibir Tabela</button>
+    <button (click)="openModal()">Adicionar Cadastro</button>
 
   </div>
 
@@ -77,6 +78,126 @@
       <td>{{professor.horario}}</td>
     </tr>
   </table>
+
+  <div class="modal-overlay">
+    <div class="modal">
+        <div id="form">
+            <h2>Novo Cadastro</h2>
+            <form action="" onsubmit="Form.submit(event)">
+              <!-- <div *ngIf="alunoId = true"> -->
+                <div class="input-group" id="aluno">
+                    <label
+                        class="sr-only"
+                        for="description">Nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Seu nome aqui"
+                    />
+                </div>
+                <div class="input-group">
+                    <label
+                        class="sr-only"
+                        for="amount">Idade</label>
+                    <input
+                        type="number"
+                        step="1"
+                        id="idade"
+                        name="idade"
+                        placeholder="Sua Idade aqui"
+                    />
+                </div>
+                <div class="input-group">
+                  <label
+                      class="sr-only"
+                      for="description">Email</label>
+                  <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      placeholder="Seu email aqui"
+                  />
+                </div>
+                <div class="input-group">
+                  <label
+                      class="sr-only"
+                      for="description">Curso</label>
+                  <input
+                      type="text"
+                      id="curso"
+                      name="curso"
+                      placeholder="Nome do seu curso aqui"
+                  />
+                </div>
+                <!-- <div class="input-group">
+                    <label
+                        class="sr-only"
+                        for="date">Data</label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                    />
+                </div> -->
+              <!-- </div> -->
+              <div id="professor">
+                <div class="input-group">
+                  <label
+                      class="sr-only"
+                      for="description">Nome</label>
+                  <input
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      placeholder="Seu nome aqui"
+                  />
+              </div>
+              <div class="input-group" id="professor">
+                <label
+                    class="sr-only"
+                    for="description">Especialidade</label>
+                <input
+                    type="text"
+                    id="especialidade"
+                    name="especialidade"
+                    placeholder="Sua especialidade aqui"
+                />
+              </div>
+              <div class="input-group">
+                <label
+                    class="sr-only"
+                    for="description">Email</label>
+                <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Seu email aqui"
+                />
+              </div>
+              <div class="input-group">
+                <label
+                    class="sr-only"
+                    for="description">Horário</label>
+                <input
+                    type="text"
+                    id="horario"
+                    name="horario"
+                    placeholder="Perido disponível para dar aulas"
+                />
+              </div>
+              </div>
+                <div class="input-group actions">
+                    <a
+                    onclick="Modal.tooggleModal()"
+                    href="#"
+                    class="button cancel">Cancelar</a>
+                    <button>Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 
